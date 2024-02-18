@@ -18,5 +18,11 @@ export let useTeamStore = defineStore('team', {
         grow(spots) {
             this.spots = spots;
         }
+    },
+
+    getters: {
+        spotsRemaining() {
+          return this.spots - this.members.length;
+        }
     }
 });

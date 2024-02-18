@@ -25,7 +25,7 @@
 
     <p 
         class="text-right text-gray-600 italic"
-        v-show="team.members.length === team.spots"
+        v-show="!team.spotsRemaining"
     >
         There are no remaining team spots. Upgrade to add more.
     </p>
