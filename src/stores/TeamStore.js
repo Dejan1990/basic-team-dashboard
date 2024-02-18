@@ -1,7 +1,7 @@
 import { defineStore } from "pinia";
 
 export let useTeamStore = defineStore('team', {
-    state() {
+    state: () => {
         return {
             name: '',
             spots: 0,
