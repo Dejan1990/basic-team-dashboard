@@ -1,5 +1,9 @@
 <script setup>
     import TeamMember from '@/components/Teams/TeamMember.vue';
+
+    import team from '@/team.json';
+
+    // console.log(team.members[0])
 </script>
 
 <template>
@@ -33,38 +37,13 @@
             </thead>
             <tbody>
 
-                <TeamMember name="James Doe" email="james@doe.com" status="Active" />
-                
-                <!-- <tr class="bg-gray-100 px-12">
-                    <td class="text-xl font-medium flex items-center gap-x-4 px-6 py-4">
-                        <img src="https://i.pravatar.cc/50?u=steven@doe.com" alt="team-member" class="rounded-xl">
-                        Steven Doe
-                    </td>
-                    <td class="text-gray-500 px-6 py-4">steven@doe.com</td>
-                    <td class="px-6 py-4">
-                        <button class="text-green-400 text-xl">Active</button>
-                    </td>
-                </tr> -->
-                <tr class="bg-gray-100 px-12">
-                    <td class="text-xl font-medium flex items-center gap-x-4 px-6 py-4">
-                        <img src="https://i.pravatar.cc/50?u=jane@doe.com" alt="team-member" class="rounded-xl">
-                        Jane Doe
-                    </td>
-                    <td class="text-gray-500 px-6 py-4">jane@doe.com</td>
-                    <td class="px-6 py-4">
-                        <button class="text-green-400 text-xl">Active</button>
-                    </td>
-                </tr>
-                <tr class="bg-gray-100 px-12">
-                    <td class="text-xl font-medium flex items-center gap-x-4 px-6 py-4">
-                        <img src="https://i.pravatar.cc/50?u=joe@doe.com" alt="team-member" class="rounded-xl">
-                        Joe Doe
-                    </td>
-                    <td class="text-gray-500 px-6 py-4">joe@doe.com</td>
-                    <td class="px-6 py-4">
-                        <button class="text-green-400 text-xl">Active</button>
-                    </td>
-                </tr>
+                <TeamMember 
+                    v-for="member in team.members" 
+                    :key="member.id" 
+                    :name="member.name" 
+                    :email="member.email" 
+                    :status="member.status" 
+                />
             </tbody>
         </table>
         <p class="text-right text-gray-600 italic">There are no remaining team spots. Upgrade to add more.</p>
