@@ -12,7 +12,11 @@ export let useTeamStore = defineStore('team', {
     actions: {
         fill() {
             import('@/team.json').then(r => {
-                console.log(r)
+                // console.log(r.default)
+                let data = r.default;
+                this.name = data.name;
+                this.spots = data.spots;
+                this.members = data.members;
             })
         }
     }
