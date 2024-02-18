@@ -1,23 +1,15 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+// import { RouterLink, RouterView } from 'vue-router'
+// import HelloWorld from './components/HelloWorld.vue'
+import TeamView from "@/views/TeamView.vue"
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
+  <div class="grid m-2 p-2">
+    <div class="place-self-center">
+      <TeamView />
     </div>
-  </header>
-
-  <RouterView />
+  </div>
 </template>
 
 <style scoped>
