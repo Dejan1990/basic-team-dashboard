@@ -7,6 +7,10 @@
     let team = useTeamStore();
 
     team.fill();
+
+    setTimeout(() => {
+        team.spots = 10
+    }, 2000);
 </script>
 
 <template>
