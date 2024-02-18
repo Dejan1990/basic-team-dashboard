@@ -1,31 +1,13 @@
 <script setup>
     import TeamMember from '@/components/Teams/TeamMember.vue';
-
+    import TeamHeader from '@/components/Teams/TeamHeader.vue';
     import team from '@/team.json';
 
     // console.log(team.members[0])
 </script>
 
 <template>
-    <header class="flex justify-between">
-        <div>
-            <button 
-                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded disabled:bg-gray-400"
-                :disabled="team.members.length === team.spots"
-            >
-                Add Member ({{ team.spots - team.members.length }} Spots Left)
-            </button>
-        </div>
-
-        <div>
-            <h3 class="inline-flex items-center text-3xl relative">
-                {{ team.name }}
-                <div class="bg-green-400 w-5 h-5 text-xs text-white rounded-full flex justify-center items-center absolute -right-4 -top-2">
-                    {{ team.spots }}
-                </div>
-            </h3>
-        </div>
-    </header>
+    <TeamHeader :team="team" />
 
     <div class="place-self-center flex flex-col gap-y-3" style="width: 725px;">
         <table class="table-fixed border-spacing-2 border-separate">
