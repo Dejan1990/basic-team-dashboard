@@ -13,13 +13,14 @@ export let useTeamStore = defineStore('team', {
         fill() {
             import('@/team.json').then(r => {
                 // console.log(r.default)
-                let data = r.default;
+                // let data = r.default;
 
-                this.$patch({ // with $patch we can update multiple state properties at once
-                    name: data.name,
-                    spots: data.spots,
-                    members: data.members
-                });
+                this.$state = r.default // replace the state entirely
+                // this.$state = {
+                //     name: data.name,
+                //     spots: data.spots,
+                //     members: data.members
+                // }
             })
         }
     }
