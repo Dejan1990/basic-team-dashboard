@@ -9,7 +9,7 @@
     team.fill();
 
     setTimeout(() => {
-        team.spots = 10
+        team.grow(25)
     }, 2000);
 </script>
 
