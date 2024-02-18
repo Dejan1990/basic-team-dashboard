@@ -2,12 +2,17 @@
     import TeamHeader from '@/components/Teams/TeamHeader.vue';
     import TeamMembers from '@/components/Teams/TeamMembers.vue';
     import TeamFooter from '@/components/Teams/TeamFooter.vue';
-    import team from '@/team.json';
+    // import team from '@/team.json';
     import {provide} from 'vue'
+    import { useTeamStore } from '@/stores/TeamStore';
+
+    let team = useTeamStore();
 
     provide('team', team)
 
     // console.log(team.members[0])
+
+    team.fill()
 </script>
 
 <template>
