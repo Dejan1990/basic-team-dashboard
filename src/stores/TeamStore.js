@@ -10,18 +10,9 @@ export let useTeamStore = defineStore('team', {
     },
 
     actions: {
-        fill() {
-            import('@/team.json').then(r => {
-                // console.log(r.default)
-                // let data = r.default;
-
-                this.$state = r.default // replace the state entirely
-                // this.$state = {
-                //     name: data.name,
-                //     spots: data.spots,
-                //     members: data.members
-                // }
-            })
+        async fill() {
+            let r = await import('@/team.json')
+            this.$state = r.default
         }
     }
 });
