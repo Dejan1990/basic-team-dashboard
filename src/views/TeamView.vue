@@ -19,9 +19,9 @@
 
         <div>
             <h3 class="inline-flex items-center text-3xl relative">
-                Smiley Team
+                {{ team.name }}
                 <div class="bg-green-400 w-5 h-5 text-xs text-white rounded-full flex justify-center items-center absolute -right-4 -top-2">
-                    5
+                    {{ team.spots }}
                 </div>
             </h3>
         </div>
@@ -49,6 +49,6 @@
     </div>
 
     <footer class="mt-12 bg-gray-100 py-4 text-center">
-        <h5 class="font-semibold text-lg">Smiley - 5 Member Team</h5>
+        <h5 class="font-semibold text-lg">{{ team.name }} - {{ team.spots }} Member Team</h5>
     </footer>
 </template>
