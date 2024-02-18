@@ -1,7 +1,10 @@
 <script setup>
-defineProps({
-    team: Object
-});
+// defineProps({
+//     team: Object
+// });
+import {inject} from 'vue'
+
+let team = inject('team');
 </script>
 <template>
     <footer class="mt-12 bg-gray-100 py-4 text-center">

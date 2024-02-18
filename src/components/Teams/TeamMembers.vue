@@ -1,9 +1,12 @@
 <script setup>
 import TeamMember from '@/components/Teams/TeamMember.vue';
+import {inject} from 'vue'
 
-defineProps({
-    team: Object
-});
+// defineProps({
+//     team: Object
+// });
+
+let team = inject('team');
 </script>
 <template>
     <table class="table-fixed border-spacing-2 border-separate">

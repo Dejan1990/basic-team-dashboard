@@ -1,7 +1,10 @@
 <script setup>
-defineProps({
-    team: Object
-});
+// defineProps({
+//     team: Object
+// });
+import {inject} from 'vue'
+
+let team = inject('team');
 </script>
 <template>
     <header class="flex justify-between">
