@@ -1,10 +1,7 @@
 <script setup>
-// defineProps({
-//     team: Object
-// });
-import {inject} from 'vue'
+    import { useTeamStore } from '@/stores/TeamStore';
 
-let team = inject('team');
+    let team = useTeamStore();
 </script>
 <template>
     <footer class="mt-12 bg-gray-100 py-4 text-center">

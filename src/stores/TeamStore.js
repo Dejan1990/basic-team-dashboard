@@ -1,4 +1,4 @@
-import {defineStore} from 'pinia'
+import { defineStore } from "pinia";
 
 export let useTeamStore = defineStore('team', {
     state() {
@@ -11,8 +11,8 @@ export let useTeamStore = defineStore('team', {
 
     actions: {
         async fill() {
-            let r = await import('@/team.json')
-            this.$state = r.default
+            let r = await import('@/team.json');
+            this.$state = r.default;
         }
     }
 });

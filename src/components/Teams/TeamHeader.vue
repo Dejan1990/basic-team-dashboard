@@ -1,10 +1,7 @@
 <script setup>
-// defineProps({
-//     team: Object
-// });
-import {inject} from 'vue'
+    import { useTeamStore } from '@/stores/TeamStore';
 
-let team = inject('team');
+    let team = useTeamStore();
 </script>
 <template>
     <header class="flex justify-between">

@@ -12,9 +12,9 @@
 </template>
 
 <script setup>
-defineProps({
-    name: String,
-    email: String, 
-    status: String
-});
+    defineProps({
+        name: String,
+        email: String,
+        status: String
+    });
 </script>

@@ -1,12 +1,8 @@
 <script setup>
-import TeamMember from '@/components/Teams/TeamMember.vue';
-import {inject} from 'vue'
+    import TeamMember from '@/components/Teams/TeamMember.vue';
+    import { useTeamStore } from '@/stores/TeamStore';
 
-// defineProps({
-//     team: Object
-// });
-
-let team = inject('team');
+    let team = useTeamStore();
 </script>
 <template>
     <table class="table-fixed border-spacing-2 border-separate">
@@ -18,8 +14,8 @@ let team = inject('team');
         <tbody>
     
             <TeamMember 
-                v-for="member in team.members" 
-                :key="member.id" 
+                v-for="member in team.members"
+                :key="member.id"
                 :name="member.name" 
                 :email="member.email" 
                 :status="member.status" 
